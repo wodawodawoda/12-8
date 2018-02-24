@@ -1,0 +1,100 @@
+.header
+	+m(container)
+		display: flex
+	+e(hamburger)
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		position: fixed
+		top: $hsize / 2
+		left: $hsize / 3
+		+size($hsize, $hsize)
+		border: 3px solid red
+		order: -1
+		background: transparent
+		line-height: 40px
+		padding-left: 20px
+		border: none
+		transition: 1s
+		// transform: rotate(90deg)
+		z-index: 3
+		&:checked
+			border: 1px solid transparent
+			width: 70vw
+			height: 40px
+			top: 0
+			left: 0
+			transform: rotate(0deg)
+			&~ .nav
+				left: 0
+			&~ .hamburger__item
+				transition: 0.9s 0.1s
+				transform: rotate(0deg)
+				left: 55%
+				font-size: 20px
+				margin-top: 10px
+				top: 5px
+				+m(first)
+					transform: rotate(90deg)
+					margin-top: - $hsize / 5
+				+m(second)
+					transform: rotate(90deg)
+					margin-top: $hsize / 10
+				+m(third)
+					transform: rotate(90deg)
+					margin-top: $hsize / 2.5
+		&:focus
+		    outline: none
+		    border: none
+
+.hamburger
+	+e(item)
+		line-height: $hsize / 1.2
+		z-index: 2
+		margin-top: $hsize / 3
+		margin-left: $hsize / 1.5
+		position: absolute
+		font-weight: 900
+		display: block
+		transition: 0.7s linear 
+		font-size: $hsize
+		top: 0
+		+m(first)
+			// top: 20px
+			left: $hsize / 3
+			// transform: rotate(90deg)
+		+m(second)
+			left: 0
+			// transform: rotate(90deg)
+		+m(third)
+			// top: -20px
+			left: - $hsize / 3
+			// transform: rotate(90deg)
+
+
+.nav
+	display: flex
+	position: absolute
+	flex-flow: column nowrap
+	transform: 
+	width: 70%
+	color: $white
+	left: -70%
+	transition: 1s
+	// height: 100vh
+	background: $btnbg
+	+e(item)
+		background: $btnbg
+		line-height: 40px
+		padding-left: 20px
+		border-bottom: 1px solid $menuborder
+		&:after
+			content: '❱'
+			position: absolute
+			right: 20px
+		+m(header)
+			margin: 0
+			&:after
+				content: ""
+
+
