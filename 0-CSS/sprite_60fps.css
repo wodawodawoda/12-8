@@ -33,7 +33,9 @@
   animation-name: play60;
   animation-fill-mode: forwards;
 }
-.nav{
+
+/* SVG top menu styles */
+.nav {
   top: -90%;
 }
 .shapeshifter:checked ~ .nav {
