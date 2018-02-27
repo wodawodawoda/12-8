@@ -1,0 +1,71 @@
+@keyframes play60
+	0%
+		background-position: 0px 0px
+	100%
+		background-position: -2880px 0px
+
+@keyframes play60reverse
+	0%
+		background-position: -2880px 0px
+	100%
+		background-position: 0px 0px
+
+
+.shapeshifter
+	-webkit-appearance: none
+	-moz-appearance: none
+	-o-appearance: none
+	appearance: none
+	// background-color: white
+	// -webkit-mask-image: url(../images/icons/sprite_60fps.svg)
+	// mask-image: url(../images/icons/sprite_60fps.svg)
+	background-image: url(../images/icons/sprite_60fps.svg)
+	animation-name: play60reverse
+	animation-duration: 300ms
+	animation-timing-function: steps(60)
+	width: 48px
+	height: 47px
+	background-repeat: no-repeat
+	z-index: 2
+	position: fixed
+	right: 0
+
+.shapeshifter:checked
+	animation-name: play60
+	animation-fill-mode: forwards
+
+/* SVG top menu styles */
+
+.shapeshifter:checked~.nav
+	top: 0
+
+
+$hSize: 60px // Hamburger size
+$hBorder: 10px // Hamburger elements width
+$navWidth: 70% // Navigation width
+
+.nav
+	position: fixed
+	top: -90%
+	z-index: 1
+	display: flex
+	flex-flow: column nowrap
+	transform: 
+	width: $navWidth
+	color: $white
+	left: 0 // For smooth animation
+	transition: 1s
+	background: $btnbg
+	+e(item)
+		background: $btnbg
+		line-height: 40px
+		padding-left: 20px
+		border-bottom: 1px solid $menuborder
+		&:after
+			content: '❱'
+			position: absolute
+			right: 20px
+		+m(header)
+			margin: 0
+			&:after
+				content: ""

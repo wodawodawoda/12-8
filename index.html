@@ -7,27 +7,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
 	<link rel="stylesheet" href="vendor/normalize.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="0-CSS/app.css">
-	<link rel="stylesheet" type="text/css" href="0-CSS/sprite_60fps.css"/>
 </head>
 
 <body>
 	<header class="header">
-		<div class="header--container">
+		<div class="header__container container">
 			<!-- CSS ANIMATION BUTTON -->
 			<!-- <input class="hamburger-input" " type="checkbox" checked>
 			<div class="hamburger"></div> -->
 			<!-- .......................................... -->
-
 			<!-- SVG ANIMATION BUTTON -->
-			<input type="checkbox" class="shapeshifter play" style="background-image: url(images/icons/sprite_60fps.svg)">
+			<input type="checkbox" class="shapeshifter play">
 			<!-- .......................................... -->
-			
 			<img src="images/icons/logo.png" alt="logo" class="header__logo">
 			<nav class="header__nav nav nav--closed">
 				<h3 class="nav__item nav__item--header">Dashboard</h3>
-				<a href="" class="nav__item"><span class="nav__icon">⌂</span>home</a>
-				<a href="" class="nav__item"><span class="nav__icon"></span>about us</a>
+				<a href="" class="nav__item">home</a>
+				<a href="" class="nav__item">about us</a>
 				<a href="" class="nav__item">services</a>
 				<a href="" class="nav__item">our projects</a>
 				<a href="" class="nav__item">our team</a>
@@ -38,7 +36,407 @@
 			</nav>
 		</div>
 	</header>
-
+	<section class="hero">
+		<div class="hero__container container">
+			<div class="hero__box">
+				<h1 class="hero__header">design is about<span class="hero__header--line-2">communication</span></h1>
+				<p class="hero__text">call us: +00 0 1234 5678</p>
+				<button class="btn btn--primary">get in touch!</button>
+			</div>
+		</div>
+		<button class="hero__phone"></button>
+	</section>
+	<section class="about">
+		<div class="about__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">about us</h2>
+				<p class="section-header__text">who we are</p>
+			</div>
+			<div class="about__box about__box--left">
+				<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae voluptas soluta possimus dicta sequi molestias amet non dignissimos consectetur incidunt quos tempore omnis ut esse nam enim, atque totam. Consequuntur repellendus rem voluptatibus odit quia, exercitationem, ullam. Architecto, necessitatibus.</p>
+				<button class="about__btn btn btn--primary">learn more</button>
+			</div>
+			<div class="about__box">
+				<img src="../images/video.jpg" alt="video" class="about__img">
+			</div>
+		</div>
+	</section>
+	<section class="services">
+		<div class="services__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">services</h2>
+				<p class="section-header__text">services that we provide</p>
+			</div>
+			<div class="services__box">
+				<img src="../images/icons/quality.svg" class="services__icon"></img>
+				<h3 class="services__title">high quality design</h3>
+				<p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			</div>
+			<div class="services__box">
+				<img src="../images/icons/star.svg" class="services__icon"></img>
+				<h3 class="services__title">modern design</h3>
+				<p class="services__text">Lorem ipsum dolor sit amet, consectetur.</p>
+			</div>
+			<div class="services__box">
+				<img src="../images/icons/clock.svg" class="services__icon"></img>
+				<h3 class="services__title">regular updates</h3>
+				<p class="services__text">Lorem ipsum dolor.</p>
+			</div>
+			<div class="services__box">
+				<img src="../images/icons/support.svg" class="services__icon"></img>
+				<h3 class="services__title">fast and free support</h3>
+				<p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem?</p>
+			</div>
+		</div>
+	</section>
+	<section class="project">
+		<div class="project__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">our projects</h2>
+				<p class="section-header__text">what we create</p>
+			</div>
+			<div class="project__nav">
+				<div class="project__filter project__filter--first">all</div>
+				<div class="project__filter">photos</div>
+				<div class="project__filter">branding</div>
+				<div class="project__filter">adverts</div>
+				<div class="project__filter">development</div>
+				<div class="project__filter project__filter--last">misc</div>
+			</div>
+			<div class="project__images">
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_1.png" alt="projects_1">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_2.png" alt="projects_2">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_3.png" alt="projects_3">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_4.png" alt="projects_4">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_5.png" alt="projects_5">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_6.png" alt="projects_6">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_7.png" alt="projects_7">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_8.png" alt="projects_8">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_9.png" alt="projects_9">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_10.png" alt="projects_10">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_11.png" alt="projects_11">
+				</div>
+				<div class="project__hover">
+					<img class="project__image" src="../images/projects_12.png" alt="projects_12">
+				</div>
+			</div>
+			<button class="project__btn btn btn--primary">more projects</button>
+		</div>
+	</section>
+	<section class="team">
+		<div class="team__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">our team</h2>
+				<p class="section-header__text">our co-workers</p>
+			</div>
+			<div class="team__box">
+				<img src="../images/team-1.jpg" alt="jane" class="team__photo">
+				<p class="team__name">Jane Doe</p>
+				<p class="team__position">Mastermind</p>
+				<div class="team__social">
+					<span class="team__icon fa fa-twitter"></span>
+					<span class="team__icon fa fa-instagram"></span>
+					<span class="team__icon fa fa-linkedin"></span>
+					<span class="team__icon fa fa-facebook"></span>
+					<span class="team__icon fa fa-youtube"></span>
+					<span class="team__icon fa fa-google-plus"></span>
+					<span class="team__icon fa fa-flickr"></span>
+				</div>
+				</img>
+			</div>
+			<div class="team__box">
+				<img src="../images/team-2.jpg" alt="" class="team__photo">
+				<p class="team__name">Mike Shiller</p>
+				<p class="team__position">Creative head</p>
+				<div class="team__social">
+					<span class="team__icon fa fa-twitter"></span>
+					<span class="team__icon fa fa-instagram"></span>
+					<span class="team__icon fa fa-linkedin"></span>
+					<span class="team__icon fa fa-facebook"></span>
+					<span class="team__icon fa fa-youtube"></span>
+					<span class="team__icon fa fa-google-plus"></span>
+					<span class="team__icon fa fa-flickr"></span>
+				</div>
+				</img>
+			</div>
+			<div class="team__box">
+				<img src="../images/team-3.jpg" alt="" class="team__photo">
+				<p class="team__name">Anna Johns</p>
+				<p class="team__position">Technical lead</p>
+				<div class="team__social">
+					<span class="team__icon fa fa-twitter"></span>
+					<span class="team__icon fa fa-instagram"></span>
+					<span class="team__icon fa fa-linkedin"></span>
+					<span class="team__icon fa fa-facebook"></span>
+					<span class="team__icon fa fa-youtube"></span>
+					<span class="team__icon fa fa-google-plus"></span>
+					<span class="team__icon fa fa-flickr"></span>
+				</div>
+				</img>
+			</div>
+		</div>
+	</section>
+	<section class="clients">
+		<section class="clients__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">happy clients</h2>
+				<p class="section-header__text">client reviews</p>
+			</div>
+			<div class="clients__box-container">
+				<div class="clients__box">
+					<img src="../images/client-1.jpg" alt="client-photo" class="clients__photo">
+					<p class="clients__name">John Doe</p>
+					<p class="clients__position">Head of PR Departament</p>
+					<span class="clients__icon fa fa-quote-left"></span>
+					<p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quod eaque nam ut, dicta corporis quidem quasi assumenda?</p>
+				</div>
+				<div class="clients__box">
+					<img src="../images/client-1.jpg" alt="client-photo" class="clients__photo">
+					<p class="clients__name">John Doe</p>
+					<p class="clients__position">Head of PR Departament</p>
+					<span class="clients__icon fa fa-quote-left"></span>
+					<p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum provident praesentium accusantium ab voluptatem laboriosam natus, obcaecati culpa.</p>
+				</div>
+				<div class="clients__box">
+					<img src="../images/client-1.jpg" alt="client-photo" class="clients__photo">
+					<p class="clients__name">John Doe</p>
+					<p class="clients__position">Head of PR Departament</p>
+					<span class="clients__icon fa fa-quote-left"></span>
+					<p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores facere quam, quo nihil iste odit praesentium sunt temporibus.</p>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="logos">
+		<div class="logos__container">
+			<img src="../images/logo-1.png" alt="logo" class="logos__logo">
+			<img src="../images/logo-2.png" alt="logo" class="logos__logo">
+			<img src="../images/logo-3.png" alt="logo" class="logos__logo">
+			<img src="../images/logo-4.png" alt="logo" class="logos__logo">
+			<img src="../images/logo-5.png" alt="logo" class="logos__logo">
+			<img src="../images/logo-6.png" alt="logo" class="logos__logo">
+		</div>
+	</section>
+	<section class="price">
+		<div class="price__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">price</h2>
+				<p class="section-header__text">pricing table</p>
+			</div>
+			<div class="price__box price__box--first">
+				<h4 class="price__variant">express</h4>
+				<p class="price__price">$9.99<span class="price__price--period">/month</span></p>
+				<p class="price__features">Tracking issues</p>
+				<p class="price__features">Add bugs through email</p>
+				<p class="price__features">Notifications</p>
+				<p class="price__features">Time tracking</p>
+				<p class="price__features price__features--last">Custom views</p>
+				<button class="price__btn btn">choose</button>
+			</div>
+			<div class="price__box">
+				<h4 class="price__variant">standart</h4>
+				<p class="price__price">$14.99<span class="price__price--period">/month</span></p>
+				<p class="price__features">Tracking issues</p>
+				<p class="price__features">Add bugs through email</p>
+				<p class="price__features">Notifications</p>
+				<p class="price__features">Time tracking</p>
+				<p class="price__features price__features--last">Custom views</p>
+				<button class="price__btn btn">choose</button>
+			</div>
+			<div class="price__box">
+				<h4 class="price__variant">luxe</h4>
+				<p class="price__price">$19.99<span class="price__price--period">/month</span></p>
+				<p class="price__features">Tracking issues</p>
+				<p class="price__features">Add bugs through email</p>
+				<p class="price__features">Notifications</p>
+				<p class="price__features">Time tracking</p>
+				<p class="price__features price__features--last">Custom views</p>
+				<button class="price__btn btn">choose</button>
+			</div>
+			<div class="price__box">
+				<h4 class="price__variant">premium</h4>
+				<p class="price__price">$24.99<span class="price__price--period">/month</span></p>
+				<p class="price__features">Tracking issues</p>
+				<p class="price__features">Add bugs through email</p>
+				<p class="price__features">Notifications</p>
+				<p class="price__features">Time tracking</p>
+				<p class="price__features price__features--last">Custom views</p>
+				<button class="price__btn btn">choose</button>
+			</div>
+		</div>
+	</section>
+	<section class="premium">
+		<div class="premium__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">premium</h2>
+				<p class="section-header__text">even more features available</p>
+			</div>
+			<img src="../images/img.jpg" alt="boxes" class="premium__image">
+			<div class="premium__box">
+				<div class="premium__feature">
+					<img src="../images/icons/check.png" class="premium__icon"></img>
+					<div class="premium__text">
+						<h3 class="premium__feature-name">first feature</h3>
+						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
+					</div>
+				</div>
+				<div class="premium__feature">
+					<img src="../images/icons/check.png" class="premium__icon"></img>
+					<div class="premium__text">
+						<h3 class="premium__feature-name">first feature</h3>
+						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
+					</div>
+				</div>
+				<div class="premium__feature">
+					<img src="../images/icons/check.png" class="premium__icon"></img>
+					<div class="premium__text">
+						<h3 class="premium__feature-name">first feature</h3>
+						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
+					</div>
+				</div>
+			</div>
+			<div class="premium__footer">
+				<button class="premium__btn btn btn--primary">get in touch</button>
+			</div>
+		</div>
+	</section>
+	<section class="facts">
+		<div class="facts__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">some facts</h2>
+				<p class="section-header__text">about our work</p>
+			</div>
+			<div class="facts__box">
+				<p class="facts__number">1000</p>
+				<p class="facts__title">design projects relased</p>
+				<p class="facts__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			</div>
+			<div class="facts__box">
+				<p class="facts__number">900</p>
+				<p class="facts__title">photos</p>
+				<p class="facts__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			</div>
+			<div class="facts__box">
+				<p class="facts__number">500</p>
+				<p class="facts__title">marketing ideas</p>
+				<p class="facts__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			</div>
+			<div class="facts__box">
+				<p class="facts__number">100</p>
+				<p class="facts__title">exhibitions</p>
+				<p class="facts__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			</div>
+		</div>
+	</section>
+	<section class="social">
+		<div class="social__container container">
+			<div class="social__item social__item--share">
+				<p class="social__counter"><span class="social__icon social__icon--share fa fa-share-alt"></span>tell about us</p>
+			</div>
+			<div class="social__item">
+				<p class="social__counter"><span class="social__icon social__icon--twitter fa fa-twitter"></span>321</p>
+			</div>
+			<div class="social__item">
+				<p class="social__counter"><span class="social__icon social__icon--linkedin fa fa-linkedin"></span>42</p>
+			</div>
+			<div class="social__item">
+				<p class="social__counter"><span class="social__icon social__icon--facebook fa fa-facebook"></span>12</p>
+			</div>
+			<div class="social__item">
+				<p class="social__counter"><span class="social__icon social__icon--google-plus fa fa-google-plus"></span>1234</p>
+			</div>
+			<div class="social__item">
+				<p class="social__counter"><span class="social__icon social__icon--pinterest fa fa-pinterest"></span>512</p>
+			</div>
+		</div>
+	</section>
+	<section class="contact">
+		<div class="contact__container container">
+			<div class="section-header">
+				<h2 class="section-header__title">contact us</h2>
+				<p class="section-header__text">our agency located in melbourne australia</p>
+			</div>
+			<form action="" class="contact__form">
+				<input type="text" class="contact__name" placeholder="NAME">
+				<input type="email" class="contact__email" placeholder="EMAIL">
+				<input type="text" class="contact__subject" placeholder="SUBJECT">
+				<textarea name="message" cols="30" rows="5" class="contact__message" placeholder="MESSAGE"></textarea>
+				<button class="contact__btn btn btn--primary">send message</button>
+			</form>
+		</div>
+	</section>
+	<section class="map">
+		<div class="map__container container">
+			<div class="map__box">
+				<div class="map__item">
+					<span class="map__icon fa fa-envelope"></span>
+					<p class="map__text">PO Box 16122 Collins Street West Victoria 8007 Australia</p>
+				</div>
+				<div class="map__item">
+					<span class="map__icon fa fa-map-marker"></span>
+					<p class="map__text">121 King Street, Melbourne Victoria 3000 Australia</p>
+				</div>
+				<div class="map__item">
+					<span class="map__icon map__icon--phone"></span>
+					<p class="map__text">+00 0 1234 5678</p>
+				</div>
+				<div class="map__item">
+					<span class="map__icon fa fa-at"></span>
+					<p class="map__text">bukindesign@gmail.com</p>
+				</div>
+				<div class="map__item">
+					<span class="map__icon fa fa-globe"></span>
+					<p class="map__text">www.envato.com</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__container container">
+			<div class="footer__box footer__box--social">
+				<div class="footer__social">
+					<span class="footer__icon fa fa-facebook"></span>
+					<span class="footer__icon fa fa-instagram"></span>
+					<span class="footer__icon fa fa-linkedin"></span>
+					<span class="footer__icon fa fa-facebook"></span>
+					<span class="footer__icon fa fa-youtube"></span>
+					<span class="footer__icon fa fa-google-plus"></span>
+					<span class="footer__icon fa fa-facebook"></span>
+				</div>
+				<div class="footer__copyrights">
+					<p>AVAX © 2016</p>
+				</div>
+			</div>
+			<div class="footer__box">
+				<p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur nemo possimus nobis ratione consectetur nisi numquam eos ipsam. Porro reiciendis beatae maiores nobis. Soluta ea recusandae, placeat odio tempore blanditiis! Odit praesentium repudiandae impedit excepturi officia ducimus tempore doloribus eius?</p>
+			</div>
+			<div class="footer__box footer__box--email">
+				<input type="email" class="footer__email" placeholder="EMAIL TOSUBSCRIBE">
+				<button class="footer__btn btn btn--primary">subscribe</button>
+			</div>
+		</div>
+	</footer>
 	<!-- JavaScript links -->
 	<script src="2-JS/app.js"></script>
 </body>

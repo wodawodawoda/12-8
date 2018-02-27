@@ -1,3 +1,557 @@
+// Universal styles
+.btn
+	+size(194px, 45px)
+	border-radius: 20px
+	border: none
+	text-transform: uppercase
+	color: $white
+	+m(primary)
+		background: $primary
+
+.container
+	display: flex
+	flex-flow: row wrap
+	width: 90%
+	max-width: 1200px
+	margin: 0 auto
+
+.section-header
+	padding-top: 20px
+	width: 100%
+	text-align: center
+	text-transform: uppercase
+	+e(title)
+		color: $black
+	+e(text)
+		color: $secondary
+
+
 .header
-	+m(container)
+	z-index: 100
+	background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1))
+	+e(container)
+
+	+media(medium)
+		background: $black
+		z-index: 100
+	+e(logo)
+		height: 100%
+		align-self: center
+		z-index: 100
+
+.shapeshifter
+	+media(medium)
+		display: none
+
+.nav
+	+media(medium)
+		box-sizing: content-box
+		justify-content: flex-end
+		text-align: center
+		background: $black
+		position: sticky
+		z-index: 1
 		display: flex
+		flex-flow: row nowrap
+		flex: 1
+		color: $white
+		transition: 1s
+		+e(item)
+			background: inherit
+			line-height: 100px
+			padding: 0 15px
+			border-bottom: 0
+			&:active
+				border-bottom: 8px solid $primary
+			&:after
+				content: ''
+			+m(header)
+				display: none
+				&:after
+					content: ""
+
+
+// Hero styles
+.hero
+	background: url(../images/hero.jpg) no-repeat
+	background-size: cover
+	position: relative
+	top: -72px // - <header> height
+	margin-bottom: -72px;
+	+media(medium)
+		position: initial
+		background-position: center
+	+e(container)
+		height: calc(100vh - 44px)
+		+media(medium)
+			height: calc(100vh - 130px)
+	+e(box)
+		margin: auto
+		width: 100%
+		text-align: center
+		text-transform: uppercase
+		color: $white
+	+e(header)
+		margin: 0
+		+m(line-2)
+			display: block
+			color: $primary
+	+e(text)
+		margin: 30px 0 50px
+	+e(phone)
+		+size(65px, 65px)
+		border-radius: 50%
+		border: none
+		background: url(../images/icons/telephone.svg) $primary center no-repeat
+		position: relative
+		left: calc(50% - 65px / 2)
+		top: 32px
+		+media(medium)
+			top: -42px
+			left: 90%
+
+// About styles
+.about
+	background: $white
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		+media(medium)
+			width: 50%
+		+media(large)
+			width: 40%
+		+m(left)
+			+media(medium)
+				width: 50%
+			+media(large)
+				width: 60%
+	+e(btn)
+		margin: 34px 0 
+	+e(img)
+		width: 100%
+
+// Services styles
+.services
+	background: $black
+	.section-header__title
+		color: $white
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+		width: 100%
+		margin-top: 20px
+		+media(medium)
+			width: 50%
+		+media(large)
+			width: 25%
+	+e(title)
+		color: white
+		text-transform: uppercase
+		margin: 38px 0 5px
+	+e(text)
+		color: $secondary
+
+// Projects styles
+.project
+	+e(nav)
+		display: flex
+		flex-flow: column nowrap
+		width: 100%
+		justify-content: center
+		text-align: center
+		margin: 24px 0 38px 0
+		+media(medium)
+			flex-direction: row
+	+e(filter)
+		background: $navbg
+		border: 1px solid $menuborder
+		padding: 10px
+		+media(medium)
+			padding: 25px
+		+m(first)
+			border-radius: 20px 20px 0 0
+			+media(medium)
+				border-radius: 50% 0 0 50%
+		+m(last)
+			border-radius: 0 0 20px 20px
+			+media(medium)
+				border-radius: 0 50% 50% 0
+	+e(images)
+		display: flex
+		flex-flow: row wrap
+		margin-bottom: 30px
+	+e(hover)
+		display: flex
+		width: 50%
+		+media(large)
+			width: 25%
+	+e(image)
+		width: 100%
+	+e(btn)
+		margin: auto
+		
+
+// Team styles
+.team
+	background: url(../images/hero-2.jpg) no-repeat center
+	background-size: cover
+	.section-header__title
+		color: $white
+	+e(container)
+		justify-content: center
+		+media(medium)
+			justify-content: space-around
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+		margin: 10px 0
+		padding: 40px
+		background: $white
+	+e(photo)
+		border-radius: 50%
+	+e(name)
+		text-transform: uppercase
+		margin: 45px 0 0 0
+	+e(position)
+		margin-bottom: 50px
+	+e(icon)
+		display: inline-flex
+		+size(33px, 33px)
+		background: $iconbg
+		border-radius: 50%
+		color: $white
+		&:before
+			margin: auto
+
+// Clients
+.clients
+	+e(box-container)
+		display: flex
+		flex-flow: row nowrap
+		overflow: hidden
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+		min-width: 100%
+		transform: translateX(0%)
+		transition: 1s
+		+media(medium)
+			min-width: 50%
+		+media(large)
+			min-width: 33%
+	+e(photo)
+		border-radius: 50%
+		margin: 15px 0 30px 0
+		+media(medium)
+			margin: 77px 0 30px 0
+	+e(position)
+		margin: 0 0 30px 0
+
+// Logos
+.logos
+	background: $white
+	+e(container)
+		overflow: hidden
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 160px
+		border: 1px solid $menuborder
+	+e(logo)
+		display: inline-flex
+		margin: 30px 20px
+		animation: spin infinite
+
+// Price
+.price
+	+e(container)
+		justify-content: center
+		+media(medium)
+			justify-content: space-around
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+		background: $white
+		// width: 100%
+		margin: 20px 0
+		padding: 30px 60px
+		+media(medium)
+			width: 45%
+		+media(large)
+			width: 22%
+		+m(first)
+			margin-top: 45px
+			+media(medium)
+				margin-top: 20px
+	+e(variant)
+		margin: 10px 0 0 0
+		text-transform: uppercase
+	+e(price)
+		+m(period)
+			display: block
+			color: $secondary
+	+e(features)
+		margin: 8px 0
+		&:after
+			content: "_"
+			display: block
+			// padding: 0
+			// margin: 0
+		+m(last)
+			&:after
+				content: ""
+	+e(btn)
+		width: 129px
+		background: $btnbg
+		margin: 28px 0 10px 0
+		&:hover
+			background: $primary
+
+// Premium
+.premium
+	background: $white
+	+e(image)
+		width: 100%
+		height: 100%
+		+media(medium)
+			width: 50%
+		+media(large)
+			width: 40%
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		+media(medium)
+			width: 50%
+		+media(large)
+			width: 60%
+	+e(feature)
+		display: flex
+	+e(icon)
+		display: flex
+		width: 12%
+		align-self: baseline
+		margin-top: 20px
+		margin-right: 20px
+		+media(medium)
+			width: 5%
+	+e(text)
+	+e(feature-name)
+		text-transform: uppercase
+	+e(feature-text)
+	+e(footer)
+		display: flex
+		width: 100%
+		padding: 30px 0
+		border-top: 1px solid $menuborder
+	+e(btn)
+		margin: auto
+
+// Facts
+.facts
+	background: $black
+	.section-header__title
+		color: $white
+	+e(container)
+		justify-content: space-around
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		align-items: center
+		text-align: center
+		width: 100%
+		margin: 20px 0
+		+media(medium)
+			width: 45%
+		+media(large)
+			width: 22% 
+	+e(number)
+		color: $primary
+		margin: 0 0 10px 0
+		&:after
+			content: "_"
+			display: block
+			color: $secondary
+	+e(title)
+		margin: 0
+		color: $white
+		text-transform: uppercase
+		// margin-bottom: 45px
+	+e(text)
+		color: $secondary
+
+
+
+// Social
+.social
+	background: $white
+	+e(container)
+		display: flex
+		flex-flow: row wrap
+		justify-content: space-around
+	+e(item)
+		width: 33%
+		text-align: center
+		+media(medium)
+			width: 15%
+		+m(share)
+			width: 100%
+			text-transform: uppercase
+			color: $secondary
+			+media(large)
+				width: 15%
+	+e(counter)
+	+e(icon)
+		color: $white
+		display: inline-flex
+		border-radius: 50%
+		margin-right: 10px
+		+size(33px, 33px)
+		+m(share)
+			color: $secondary
+		+m(twitter)
+			background: #34c5f0
+		+m(linkedin)
+			background: #127cb4
+		+m(facebook)
+			background: #336297
+		+m(google-plus)
+			background: #e74237
+		+m(pinterest)
+			background: #b71c29
+		&:before
+			margin: auto
+
+
+// Contact
+.contact
+	+e(container)
+		justify-content: space-around
+	+e(form)
+		margin-top: 20px
+		display: flex
+		flex-flow: row wrap
+		min-height: 300px
+		align-items: space-around
+		width: 100%
+		+media(medium)
+			width: 80%
+		+media(large)
+			width: 50%
+		input, textarea
+			border: 0
+			background: inherit
+			border-bottom: 2px solid $input
+	+e(name)
+		width: 45%
+	+e(email)
+		width: 45%
+		margin-left: auto
+	+e(subject)
+		width: 100%
+		margin: 10px 0
+	+e(message)
+		width: 100%
+	+e(btn)
+		margin: auto
+
+// Map
+.map
+	background: url(../images/mapsm.jpg) 76% 250%
+	background-size: 300%
+	height: 500px
+	+e(container)
+		+media(medium)
+			height: 500px
+			align-content: space-evenly;
+	+media(medium)
+		background-position: center
+		background-size: cover
+		backgroun-repeat: no-repeat
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		background: $white
+		margin: 20px 0
+		padding: 20px
+		+media(medium)
+			width: 50%
+	+e(item)
+		display: flex
+		align-items: center
+		margin: 10px 0
+	+e(icon)
+		display: flex
+		background: $iconbg
+		+size(35px, 35px)
+		border-radius: 50%
+		margin-right: 10px
+		&:before
+			margin: auto
+		+m(phone)
+			&:before
+				content: "☎"
+	+e(text)
+		width: calc(100% - 45px)
+		margin: 0
+
+// Footer
+.footer
+	background: $black
+	position: relative
+	+e(container)
+		justify-content: space-between
+	+e(box)
+		display: flex
+		flex-flow: column nowrap
+		width: 100%
+		min-height: 200px
+		+media(medium)
+			width: 45%
+		+m(social)
+			padding: 20px 0 
+			justify-content: space-between
+			+media(medium)
+				width: 100%
+		+m(email)
+			background: $btnbg
+			justify-content: center
+			align-items: center
+			// margin: 20px 0 80px
+			// +media(medium)
+			// 	margin: 0
+		+media(large)
+			width: 30%
+	+e(social)
+		align-self: center
+	+e(icon)
+		display: inline-flex
+		+size(35px, 35px)
+		border-radius: 50%
+		background: $btnbg
+		color: white
+		&:before
+			margin: auto
+	+e(copyrights)
+		position: absolute
+		bottom: 0
+		color: $white
+		+media(large)
+			position: initial
+	+e(text)
+		color: white
+	+e(email)
+		background: inherit
+		border: 0
+		border-bottom: 2px solid $secondary
+		width: 80%
+		margin-bottom: 28px
