@@ -32,8 +32,6 @@
 
 // Header
 .header
-	z-index: 100
-	background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1))
 	+e(container)
 
 	+media(medium)
@@ -42,28 +40,33 @@
 	+e(logo)
 		height: 100%
 		align-self: center
-		z-index: 100
+		z-index: 1
 
 .shapeshifter
 	+media(medium)
 		display: none
 
 .nav
+	text-transform: uppercase
 	+media(medium)
-		box-sizing: content-box
 		justify-content: flex-end
+		margin-left: auto
 		text-align: center
 		background: $black
-		position: sticky
+		position: relative
 		z-index: 1
 		display: flex
-		flex-flow: row nowrap
+		flex-flow: row wrap
 		flex: 1
 		color: $white
 		transition: 1s
+		top: 0
+		max-width: 60%
+		+media(large)
+			max-width: 90%
+
 		+e(item)
 			background: inherit
-			line-height: 100px
 			padding: 0 15px
 			border-bottom: 0
 			&:active
@@ -89,7 +92,12 @@
 	+e(container)
 		height: calc(100vh - 44px)
 		+media(medium)
-			height: calc(100vh - 130px)
+			height: calc(100vh - 113px)
+		+media(large)
+			height: calc(100vh - 73px)
+		+media(xlarge)
+			height: calc(100vh - 44px)
+
 	+e(box)
 		margin: auto
 		width: 100%
