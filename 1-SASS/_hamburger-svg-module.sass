@@ -43,29 +43,3 @@
 $hSize: 60px // Hamburger size
 $hBorder: 10px // Hamburger elements width
 $navWidth: 70% // Navigation width
-
-.nav
-	position: fixed
-	top: -90%
-	z-index: 1
-	display: flex
-	flex-flow: column nowrap
-	transform: 
-	width: $navWidth
-	color: $white
-	left: 0 // For smooth animation
-	transition: 1s
-	background: $btnbg
-	+e(item)
-		background: $btnbg
-		line-height: 40px
-		padding-left: 20px
-		border-bottom: 1px solid $menuborder
-		&:after
-			content: '❱'
-			position: absolute
-			right: 20px
-		+m(header)
-			margin: 0
-			&:after
-				content: ""
