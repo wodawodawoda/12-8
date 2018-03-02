@@ -18,6 +18,7 @@
     "build:autoprefixer": "autoprefixer-cli 0-CSS/app.css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o 0-CSS 1-SASS",
     "watch": "npm-run-all -p watch:*",
+    "watch:query": "onchange 0-CSS/app.css -- mqpacker 0-CSS/app.css 0-CSS/app.css",
     "watch:sass": "node-sass --output-style expanded --source-map true -o 0-CSS 1-SASS/app.sass --watch",
     "watch:browser-sync": "browser-sync start --server --files 0-CSS/app.css index.html"
   },
@@ -34,7 +35,8 @@
     "npm-run-all": "^4.1.2",
     "nu-html-checker": "^0.1.0",
     "onchange": "^3.3.0",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "css-mqpacker": "^6.0.2"
   },
   "dependencies": {},
   "optionalDependencies": {}
