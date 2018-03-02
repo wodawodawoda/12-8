@@ -5,6 +5,8 @@
 	border: none
 	text-transform: uppercase
 	color: $white
+	font-size: 12px
+	font-weight: 700
 	+m(primary)
 		background: $primary
 
@@ -20,12 +22,15 @@
 	width: 100%
 	text-align: center
 	text-transform: uppercase
+	font: Montserrat bold
 	+e(title)
+		font-size: 30px
 		color: $black
 	+e(text)
+		font-weight: 600
 		color: $secondary
 
-
+// Header
 .header
 	z-index: 100
 	background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1))
@@ -122,12 +127,14 @@
 		+media(large)
 			width: 40%
 		+m(left)
+			font: $p
+			font-weight: 300
 			+media(medium)
 				width: 50%
 			+media(large)
 				width: 60%
 	+e(btn)
-		margin: 34px 0 
+		margin: 34px 0
 	+e(img)
 		width: 100%
 
@@ -143,6 +150,7 @@
 		text-align: center
 		width: 100%
 		margin-top: 20px
+		font-weight: 400
 		+media(medium)
 			width: 50%
 		+media(large)
@@ -151,8 +159,10 @@
 		color: white
 		text-transform: uppercase
 		margin: 38px 0 5px
+		font-size: 18px
 	+e(text)
 		color: $secondary
+		font-size: 12px
 
 // Projects styles
 .project
@@ -163,6 +173,7 @@
 		justify-content: center
 		text-align: center
 		margin: 24px 0 38px 0
+		// font-size: 16px
 		+media(medium)
 			flex-direction: row
 	+e(filter)
@@ -198,25 +209,37 @@
 .team
 	background: url(../images/hero-2.jpg) no-repeat center
 	background-size: cover
-	.section-header__title
-		color: $white
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 100%
+		background: rgba(0,0,0,0.7)
+	.section-header
+		z-index: 1
+		.section-header__title
+			color: $white
 	+e(container)
 		justify-content: center
 		+media(medium)
 			justify-content: space-around
 	+e(box)
+		z-index: 1
 		display: flex
 		flex-flow: column nowrap
 		align-items: center
 		text-align: center
 		margin: 10px 0
 		padding: 40px
+		border-radius: 5px
 		background: $white
 	+e(photo)
 		border-radius: 50%
 	+e(name)
 		text-transform: uppercase
 		margin: 45px 0 0 0
+		font-size: 21px
 	+e(position)
 		margin-bottom: 50px
 	+e(icon)
@@ -251,8 +274,15 @@
 		margin: 15px 0 30px 0
 		+media(medium)
 			margin: 77px 0 30px 0
+	+e(name)
+		font-size: 24px
+		font-weight: 700
 	+e(position)
 		margin: 0 0 30px 0
+		font-size: 18px
+		font-weight: 400
+	+e(text)
+		color: $pcolor
 
 // Logos
 .logos
@@ -295,12 +325,20 @@
 	+e(variant)
 		margin: 10px 0 0 0
 		text-transform: uppercase
+		font-weight: 400
 	+e(price)
+		font-size: 31px
+		font-weight: 700
 		+m(period)
 			display: block
 			color: $secondary
+			font-size: 10px
+			font-weight: 400
 	+e(features)
 		margin: 8px 0
+		color: $pcolor
+		font-size: 10px
+		font-weight: 400
 		&:after
 			content: "_"
 			display: block
@@ -347,7 +385,10 @@
 	+e(text)
 	+e(feature-name)
 		text-transform: uppercase
+		color: $premium2
+		font-size: 21px
 	+e(feature-text)
+		color: $premium
 	+e(footer)
 		display: flex
 		width: 100%
@@ -377,6 +418,8 @@
 	+e(number)
 		color: $primary
 		margin: 0 0 10px 0
+		font-size: 48px
+		font-weight: 700
 		&:after
 			content: "_"
 			display: block
@@ -385,9 +428,11 @@
 		margin: 0
 		color: $white
 		text-transform: uppercase
-		// margin-bottom: 45px
+		font-size: 28px
+		font-weight: 700
 	+e(text)
 		color: $secondary
+		font-size: 12px
 
 
 
@@ -410,6 +455,9 @@
 			+media(large)
 				width: 15%
 	+e(counter)
+		color: $secondary
+		font-size: 10px
+		font-weight: 700h
 	+e(icon)
 		color: $white
 		display: inline-flex
@@ -489,16 +537,21 @@
 		display: flex
 		align-items: center
 		margin: 10px 0
+		color: $pcolor
+		font-size: 12px
 	+e(icon)
 		display: flex
 		background: $iconbg
 		+size(35px, 35px)
 		border-radius: 50%
 		margin-right: 10px
+		color: $white
+		font-size: 20px
 		&:before
 			margin: auto
 		+m(phone)
 			&:before
+				font-size: 30px
 				content: "☎"
 	+e(text)
 		width: calc(100% - 45px)
@@ -526,9 +579,6 @@
 			background: $btnbg
 			justify-content: center
 			align-items: center
-			// margin: 20px 0 80px
-			// +media(medium)
-			// 	margin: 0
 		+media(large)
 			width: 30%
 	+e(social)
@@ -538,17 +588,20 @@
 		+size(35px, 35px)
 		border-radius: 50%
 		background: $btnbg
-		color: white
+		color: $white
+		font-size: 18px
 		&:before
 			margin: auto
 	+e(copyrights)
 		position: absolute
 		bottom: 0
 		color: $white
+		font-weight: 400
 		+media(large)
 			position: initial
 	+e(text)
-		color: white
+		color: $pcolor
+		font-size: 12px
 	+e(email)
 		background: inherit
 		border: 0
