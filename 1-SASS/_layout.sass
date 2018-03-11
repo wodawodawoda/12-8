@@ -1,4 +1,6 @@
 // Universal styles
+#map
+	+size(100%, 500px)
 .btn
 	+size(194px, 45px)
 	border-radius: 20px
@@ -41,6 +43,8 @@
 		height: 100%
 		align-self: center
 		z-index: 1
+	+media(medium)
+		top: 0
 
 .shapeshifter
 	+media(medium)
@@ -48,14 +52,15 @@
 
 .nav
 	position: fixed
-	top: -90%
-	z-index: 1
+	top: 0
+	left: -70%
+	z-index: 2
 	display: flex
 	flex-flow: column nowrap
 	transform: 
 	width: $navWidth
 	color: $white
-	left: 0 // For smooth animation
+	// left: 0 // For smooth animation
 	transition: 1s
 	background: $btnbg
 	+e(item)
@@ -84,7 +89,7 @@
 		flex: 1
 		color: $white
 		transition: 1s
-		top: 0
+		left: 0
 		max-width: 60%
 		+media(large)
 			max-width: 50%
@@ -117,7 +122,7 @@
 	background-size: cover
 	position: relative
 	top: -72px // - <header> height
-	margin-bottom: -72px;
+	margin-bottom: -72px
 	+media(medium)
 		position: initial
 		background-position: center
@@ -254,12 +259,14 @@
 	+e(images)
 		display: flex
 		flex-flow: row wrap
+		justify-content: space-between
 		margin-bottom: 30px
 	+e(hover)
 		display: flex
-		width: 50%
+		width: 49%
+		padding-bottom: 15px
 		+media(large)
-			width: 25%
+			width: 24%
 	+e(image)
 		width: 100%
 	+e(btn)
@@ -319,7 +326,7 @@
 	+e(box-container)
 		display: flex
 		flex-flow: row nowrap
-		overflow: hidden
+		overflow-x: scroll
 	+e(box)
 		display: flex
 		flex-flow: column nowrap
@@ -596,10 +603,15 @@
 	background: url(../images/mapsm.jpg) 76% 250%
 	background-size: 300%
 	height: 500px
+	position: relative
 	+e(container)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
 		+media(medium)
 			height: 500px
-			align-content: space-evenly;
+			align-content: space-evenly
 	+media(medium)
 		background-position: center
 		background-size: cover

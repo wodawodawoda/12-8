@@ -5,14 +5,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>12-8</title>
 	<link rel="stylesheet" href="vendor/normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="0-CSS/app.css">
 </head>
 
 <body>
-	<header class="header">
+	<header id="header" class="header">
 		<div class="header__container container">
 			<!-- CSS ANIMATION BUTTON -->
 			<!-- <input class="hamburger-input" " type="checkbox" checked>
@@ -24,19 +24,19 @@
 			<img src="images/icons/logo.png" alt="logo" class="header__logo">
 			<nav class="header__nav nav nav--closed">
 				<h3 class="nav__item nav__item--header">Dashboard</h3>
-				<a href="" class="nav__item">home</a>
-				<a href="" class="nav__item">about us</a>
-				<a href="" class="nav__item">services</a>
-				<a href="" class="nav__item">our projects</a>
-				<a href="" class="nav__item">our team</a>
-				<a href="" class="nav__item">happy clients</a>
-				<a href="" class="nav__item">price</a>
-				<a href="" class="nav__item">some facts</a>
-				<a href="" class="nav__item">contact us</a>
+				<a href="#hero" class="nav__item">home</a>
+				<a href="#about" class="nav__item nav__item--about">about us</a>
+				<a href="#services" class="nav__item">services</a>
+				<a href="#project" class="nav__item">our projects</a>
+				<a href="#team" class="nav__item">our team</a>
+				<a href="#clients" class="nav__item">happy clients</a>
+				<a href="#price" class="nav__item">price</a>
+				<a href="#facts" class="nav__item">some facts</a>
+				<a href="#contact" class="nav__item">contact us</a>
 			</nav>
 		</div>
 	</header>
-	<section class="hero">
+	<section id="hero" class="hero">
 		<div class="hero__container container">
 			<div class="hero__box">
 				<h1 class="hero__header">design is about<span class="hero__header--line-2">communication</span></h1>
@@ -46,12 +46,12 @@
 		</div>
 		<button class="hero__phone"></button>
 	</section>
-	<section class="about">
+	<section id="about" class="about">
 		<div class="about__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">about us</h2>
 				<p class="section-header__text">who we are</p>
-			</div>
+			</header>
 			<div class="about__box about__box--left">
 				<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod molestiae voluptas soluta possimus dicta sequi molestias amet non dignissimos consectetur incidunt quos tempore omnis ut esse nam enim, atque totam. Consequuntur repellendus rem voluptatibus odit quia, exercitationem, ullam. Architecto, necessitatibus.</p>
 				<button class="about__btn btn btn--primary">learn more</button>
@@ -61,40 +61,40 @@
 			</div>
 		</div>
 	</section>
-	<section class="services">
+	<section id="services" class="services">
 		<div class="services__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">services</h2>
 				<p class="section-header__text">services that we provide</p>
-			</div>
+			</header>
 			<div class="services__box">
-				<img src="images/icons/quality.svg" class="services__icon"></img>
+				<img src="images/icons/quality.svg" class="services__icon" alt="quality icon">
 				<h3 class="services__title">high quality design</h3>
 				<p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
 			</div>
 			<div class="services__box">
-				<img src="images/icons/star.svg" class="services__icon"></img>
+				<img src="images/icons/star.svg" class="services__icon" alt="star icon">
 				<h3 class="services__title">modern design</h3>
 				<p class="services__text">Lorem ipsum dolor sit amet, consectetur.</p>
 			</div>
 			<div class="services__box">
-				<img src="images/icons/clock.svg" class="services__icon"></img>
+				<img src="images/icons/clock.svg" class="services__icon" alt="clock icon">
 				<h3 class="services__title">regular updates</h3>
 				<p class="services__text">Lorem ipsum dolor.</p>
 			</div>
 			<div class="services__box">
-				<img src="images/icons/support.svg" class="services__icon"></img>
+				<img src="images/icons/support.svg" class="services__icon" alt="support icon">
 				<h3 class="services__title">fast and free support</h3>
 				<p class="services__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem?</p>
 			</div>
 		</div>
 	</section>
-	<section class="project">
+	<section id="project" class="project">
 		<div class="project__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">our projects</h2>
 				<p class="section-header__text">what we create</p>
-			</div>
+			</header>
 			<div class="project__nav">
 				<button class="project__filter project__filter--first">all</button>
 				<button class="project__filter">photos</button>
@@ -144,12 +144,12 @@
 			<button class="project__btn btn btn--primary">more projects</button>
 		</div>
 	</section>
-	<section class="team">
+	<section id="team" class="team">
 		<div class="team__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">our team</h2>
 				<p class="section-header__text">our co-workers</p>
-			</div>
+			</header>
 			<div class="team__box">
 				<img src="images/team-1.jpg" alt="jane" class="team__photo">
 				<p class="team__name">Jane Doe</p>
@@ -163,7 +163,6 @@
 					<span class="team__icon fa fa-google-plus"></span>
 					<span class="team__icon fa fa-flickr"></span>
 				</div>
-				</img>
 			</div>
 			<div class="team__box">
 				<img src="images/team-2.jpg" alt="" class="team__photo">
@@ -178,7 +177,7 @@
 					<span class="team__icon fa fa-google-plus"></span>
 					<span class="team__icon fa fa-flickr"></span>
 				</div>
-				</img>
+				
 			</div>
 			<div class="team__box">
 				<img src="images/team-3.jpg" alt="" class="team__photo">
@@ -193,16 +192,16 @@
 					<span class="team__icon fa fa-google-plus"></span>
 					<span class="team__icon fa fa-flickr"></span>
 				</div>
-				</img>
+				
 			</div>
 		</div>
 	</section>
-	<section class="clients">
+	<section id="clients" class="clients">
 		<section class="clients__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">happy clients</h2>
 				<p class="section-header__text">client reviews</p>
-			</div>
+			</header>
 			<div class="clients__box-container">
 				<div class="clients__box">
 					<img src="images/client-1.jpg" alt="client-photo" class="clients__photo">
@@ -238,12 +237,12 @@
 			<img src="images/logo-6.png" alt="logo" class="logos__logo">
 		</div>
 	</section>
-	<section class="price">
+	<section id="price" class="price">
 		<div class="price__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">price</h2>
 				<p class="section-header__text">pricing table</p>
-			</div>
+			</header>
 			<div class="price__box price__box--first">
 				<h4 class="price__variant">express</h4>
 				<p class="price__price">$9.99<span class="price__price--period">/month</span></p>
@@ -286,30 +285,30 @@
 			</div>
 		</div>
 	</section>
-	<section class="premium">
+	<section id="premium" class="premium">
 		<div class="premium__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">premium</h2>
 				<p class="section-header__text">even more features available</p>
-			</div>
+			</header>
 			<img src="images/img.jpg" alt="boxes" class="premium__image">
 			<div class="premium__box">
 				<div class="premium__feature">
-					<img src="images/icons/check.png" class="premium__icon"></img>
+					<img src="images/icons/check.png" class="premium__icon" alt="check image">
 					<div class="premium__text">
 						<h3 class="premium__feature-name">first feature</h3>
 						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
 					</div>
 				</div>
 				<div class="premium__feature">
-					<img src="images/icons/check.png" class="premium__icon"></img>
+					<img src="images/icons/check.png" class="premium__icon" alt="check image">
 					<div class="premium__text">
 						<h3 class="premium__feature-name">first feature</h3>
 						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
 					</div>
 				</div>
 				<div class="premium__feature">
-					<img src="images/icons/check.png" class="premium__icon"></img>
+					<img src="images/icons/check.png" class="premium__icon" alt="check image">
 					<div class="premium__text">
 						<h3 class="premium__feature-name">first feature</h3>
 						<p class="premium__feature-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, iure!</p>
@@ -321,12 +320,12 @@
 			</div>
 		</div>
 	</section>
-	<section class="facts">
+	<section id="facts" class="facts">
 		<div class="facts__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">some facts</h2>
 				<p class="section-header__text">about our work</p>
-			</div>
+			</header>
 			<div class="facts__box">
 				<p class="facts__number">1000</p>
 				<p class="facts__title">design projects relased</p>
@@ -371,13 +370,13 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="contact__container container">
-			<div class="section-header">
+			<header class="section-header">
 				<h2 class="section-header__title">contact us</h2>
 				<p class="section-header__text">our agency located in melbourne australia</p>
-			</div>
-			<form action="" class="contact__form">
+			</header>
+			<form class="contact__form">
 				<input type="text" class="contact__name" placeholder="NAME">
 				<input type="email" class="contact__email" placeholder="EMAIL">
 				<input type="text" class="contact__subject" placeholder="SUBJECT">
@@ -387,6 +386,7 @@
 		</div>
 	</section>
 	<section class="map">
+		<div id="map"></div>
 		<div class="map__container container">
 			<div class="map__box">
 				<div class="map__item">
@@ -439,6 +439,7 @@
 	</footer>
 	<!-- JavaScript links -->
 	<script src="2-JS/app.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhMBXAntkc7eji0fDewEO3NAC_XnJ_sq8&callback=myMap"></script>
 </body>
 
 </html>
